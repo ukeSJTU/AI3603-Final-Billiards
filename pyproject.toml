@@ -1,9 +1,7 @@
 [project]
 name = "ai3603-final-billiards"
 version = "0.1.0"
-description = "Add your description here"
+description = "AI3603 Final Project - Billiards Game"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "loguru>=0.7.3",
-]
+dependencies = ["loguru>=0.7.3"]
