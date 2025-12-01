@@ -4,4 +4,9 @@ version = "0.1.0"
 description = "AI3603 Final Project - Billiards Game"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["loguru>=0.7.3"]
+dependencies = ["loguru>=0.7.3", "pooltool-billiards==0.5.0"]
+
+[tool.uv]
+override-dependencies = [
+    "panda3d>=1.10.13,<1.11",
+] # Force to use stable version of panda3d
