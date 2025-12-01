@@ -8,7 +8,6 @@ import pooltool as pt
 from bayes_opt import BayesianOptimization, SequentialDomainReductionTransformer
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import Matern
-from numpy.typing import NDArray
 
 from config import BayesianOptConfig, RewardConfig, ShotParams
 from logger import logger
@@ -220,7 +219,9 @@ class BasicAgent(Agent):
         logger.info("BasicAgent (贝叶斯优化) 已初始化")
 
     def _create_optimizer(
-        self, reward_function: Callable[[float, float, float, float, float], float], seed: int
+        self,
+        reward_function: Callable[[float, float, float, float, float], float],
+        seed: int,
     ) -> BayesianOptimization:
         """
         创建贝叶斯优化器
@@ -327,7 +328,7 @@ class BasicAgent(Agent):
                     phi=params["phi"],
                     theta=params["theta"],
                     a=params["a"],
-                    b=params["b"]
+                    b=params["b"],
                 )
 
                 # 运行物理模拟
