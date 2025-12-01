@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "AI3603 Final Project - Billiards Game"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["loguru>=0.7.3", "pooltool-billiards==0.5.0"]
+dependencies = [
+    "bayesian-optimization>=3.1.0",
+    "loguru>=0.7.3",
+    "pooltool-billiards==0.5.0",
+]
 
 [tool.uv]
 override-dependencies = [
