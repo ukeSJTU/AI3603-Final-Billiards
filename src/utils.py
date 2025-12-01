@@ -1,5 +1,7 @@
 from typing import TypedDict
 
+import pooltool as pt
+
 
 class ShotAction(TypedDict):
     V0: float  # 初速度(m/s)
@@ -16,3 +18,7 @@ class ShotParams:
     PHI_MIN, PHI_MAX = 0.0, 360.0
     THETA_MIN, THETA_MAX = 0.0, 90.0
     OFFSET_MIN, OFFSET_MAX = -0.5, 0.5
+
+
+BallState = dict[str, pt.objects.Ball]  # {ball_id: Ball}
+BallTargets = list[str]  # ['1', '2', ...] 目标球id列表
